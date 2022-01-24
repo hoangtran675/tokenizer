@@ -7,7 +7,7 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
-  
+
     h1,
     h2,
     h3,
@@ -16,15 +16,15 @@
     h6 {
       margin: 8px 0;
     }
-  
+
     p {
       margin: 0;
     }
-  
+
     .spacer {
       flex: 1;
     }
-  
+
     .toolbar {
       position: absolute;
       top: 0;
@@ -37,26 +37,26 @@
       color: white;
       font-weight: 600;
     }
-  
+
     .toolbar img {
       margin: 0 16px;
     }
-  
+
     .toolbar #twitter-logo {
       height: 40px;
       margin: 0 8px;
     }
-  
+
     .toolbar #youtube-logo {
       height: 40px;
       margin: 0 16px;
     }
-  
+
     .toolbar #twitter-logo:hover,
     .toolbar #youtube-logo:hover {
       opacity: 0.8;
     }
-  
+
     .content {
       display: flex;
       margin: 82px auto 32px;
@@ -65,27 +65,27 @@
       flex-direction: column;
       align-items: center;
     }
-  
+
     svg.material-icons {
       height: 24px;
       width: auto;
     }
-  
+
     svg.material-icons:not(:last-child) {
       margin-right: 8px;
     }
-  
+
     .card svg.material-icons path {
       fill: #888;
     }
-  
+
     .card-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       margin-top: 16px;
     }
-  
+
     .card {
       all: unset;
       border-radius: 4px;
@@ -102,29 +102,29 @@
       transition: all 0.2s ease-in-out;
       line-height: 24px;
     }
-  
+
     .card-container .card:not(:last-child) {
       margin-right: 0;
     }
-  
+
     .card.card-small {
       height: 16px;
       width: 168px;
     }
-  
+
     .card-container .card:not(.highlight-card) {
       cursor: pointer;
     }
-  
+
     .card-container .card:not(.highlight-card):hover {
       transform: translateY(-3px);
       box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-  
+
     .card-container .card:not(.highlight-card):hover .material-icons path {
       fill: rgb(105, 103, 103);
     }
-  
+
     .card.highlight-card {
       background-color: #1976d2;
       color: white;
@@ -134,18 +134,18 @@
       min-width: 30%;
       position: relative;
     }
-  
+
     .card.card.highlight-card span {
       margin-left: 60px;
     }
-  
+
     svg#rocket {
       width: 80px;
       position: absolute;
       left: -10px;
       top: -24px;
     }
-  
+
     svg#rocket-smoke {
       height: calc(100vh - 95px);
       position: absolute;
@@ -153,18 +153,18 @@
       right: 180px;
       z-index: -10;
     }
-  
+
     a,
     a:visited,
     a:hover {
       color: #1976d2;
       text-decoration: none;
     }
-  
+
     a:hover {
       color: #125699;
     }
-  
+
     .terminal {
       position: relative;
       width: 80%;
@@ -175,7 +175,7 @@
       overflow: hidden;
       background-color: rgb(15, 15, 16);
     }
-  
+
     .terminal::before {
       content: "\2022 \2022 \2022";
       position: absolute;
@@ -190,14 +190,14 @@
       padding: 14px 0;
       text-indent: 4px;
     }
-  
+
     .terminal pre {
       font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
       color: white;
       padding: 0 1rem 1rem;
       margin: 0;
     }
-  
+
     .circle-link {
       height: 40px;
       width: 40px;
@@ -212,24 +212,24 @@
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       transition: 1s ease-out;
     }
-  
+
     .circle-link:hover {
       transform: translateY(-0.25rem);
       box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     }
-  
+
     footer {
       margin-top: 8px;
       display: flex;
       align-items: center;
       line-height: 20px;
     }
-  
+
     footer a {
       display: flex;
       align-items: center;
     }
-  
+
     .github-star-badge {
       color: #24292e;
       display: flex;
@@ -242,19 +242,19 @@
       margin-left: 4px;
       font-weight: 600;
     }
-  
+
     .github-star-badge:hover {
       background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
       border-color: rgba(27, 31, 35, .35);
       background-position: -.5em;
     }
-  
+
     .github-star-badge .material-icons {
       height: 16px;
       width: 16px;
       margin-right: 4px;
     }
-  
+
     svg#clouds {
       position: fixed;
       bottom: -160px;
@@ -262,29 +262,29 @@
       z-index: -10;
       width: 1920px;
     }
-  
+
     /* Responsive Styles */
     @media screen and (max-width: 767px) {
       .card-container > *:not(.circle-link),
       .terminal {
         width: 100%;
       }
-  
+
       .card:not(.highlight-card) {
         height: 16px;
         margin: 8px 0;
       }
-  
+
       .card.highlight-card span {
         margin-left: 72px;
       }
-  
+
       svg#rocket-smoke {
         right: 120px;
         transform: rotate(-5deg);
       }
     }
-  
+
     @media screen and (max-width: 575px) {
       svg#rocket-smoke {
         display: none;
@@ -318,12 +318,12 @@
       </svg>
     </a>
   </div> -->
-  
+
   <div class="content" role="main">
-  
+
     <!-- Highlight Card -->
     <div class="card highlight-card card-small">
-  
+
       <svg id="rocket" xmlns="http://www.w3.org/2000/svg" width="101.678" height="101.678" viewBox="0 0 101.678 101.678">
         <title>Rocket Ship</title>
         <g id="Group_83" data-name="Group 83" transform="translate(-141 -696)">
@@ -339,9 +339,9 @@
           </g>
         </g>
       </svg>
-  
+
       <span>{{ title }} app is running!</span>
-  
+
       <svg id="rocket-smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632"
            viewBox="0 0 516.119 1083.632">
         <title>Rocket Ship Smoke</title>
@@ -349,27 +349,27 @@
               d="M644.6,141S143.02,215.537,147.049,870.207s342.774,201.755,342.774,201.755S404.659,847.213,388.815,762.2c-27.116-145.51-11.551-384.124,271.9-609.1C671.15,139.365,644.6,141,644.6,141Z"
               transform="translate(-147.025 -140.939)" fill="#f5f5f5"/>
       </svg>
-  
+
     </div>
-  
-  
-  
-  
+
+
+
+
   </div>
-  
+
   <!--<div class=" border border-primary">-->
   <!--  <ng-select [items]="options"  [searchable]="false" [clearable]="false"-->
   <!--             [(ngModel)]="selectedOption" class="auto-grow">-->
   <!--  </ng-select>-->
-  
+
   <!--</div>-->
   <div class="text-center m-1">
-    <a><button type="button" class="btn btn-primary text-center m-1" [routerLink]="'/similar/test/'">Train-Search</button></a>
+<!--    <a><button type="button" class="btn btn-primary text-center m-1" [routerLink]="'/similar/test/'">Train-Search</button></a>-->
     <a><button type="button" class="btn btn-primary text-center m-1" [routerLink]="'/similar/test2/'">Sentence Similarity</button></a>
   </div>
-  
-  
-  
+
+
+
   <!--<button type="button" class="bi bi-plus-lg">Secondary</button>-->
   <!--<button type="button" class="btn btn-success">Success</button>-->
   <!--<button type="button" class="btn btn-danger">Danger</button>-->
@@ -377,6 +377,6 @@
   <!--<button type="button" class="btn btn-info">Info</button>-->
   <!--<button type="button" class="btn btn-light">Light</button>-->
   <!--<button type="button" class="btn btn-dark">Dark</button>-->
-  
+
   <router-outlet></router-outlet>
-  
+
