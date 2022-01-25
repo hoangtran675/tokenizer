@@ -7,11 +7,13 @@ import { TokenizerComponent } from './tokenizer/tokenizer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { TokenizerContainerComponent } from './tokenizer-container/tokenizer-container.component';
 
 
 @NgModule({
   declarations: [
-    TokenizerComponent
+    TokenizerComponent,
+    TokenizerContainerComponent
   ],
   imports: [
     CommonModule,

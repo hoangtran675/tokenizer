@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter, Input } from '@angular/core';
 import { TestService } from 'src/app/service/test.service';
 
 @Component({
@@ -7,29 +7,22 @@ import { TestService } from 'src/app/service/test.service';
   styleUrls: ['./tokenizer.component.scss']
 })
 export class TokenizerComponent implements OnInit {
-  
+  @Output() getWordOuput : EventEmitter<any> = new EventEmitter<any>();
+  @Output() getPostagOutput : EventEmitter<any> = new EventEmitter<any>();
+  @Input()  list_word : any = [];
+  @Input()  postag : any = [];
   textInput = '';
-  result: any = [];
-  postag : any = [];
-
-  constructor(private service : TestService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
   getWord(){
-    let textArr = this.textInput.split(/\n/);
-    this.service.getWordList(textArr).subscribe((res : any) => {
-      console.log(res);
-      this.result = res.result;
-    });
+    this.getWordOuput.emit(this.textInput.split(/\n/));
   }
 
   getPostag(){
-    let textArr = this.textInput.split(/\n/);
-    this.service.getPosTag(textArr).subscribe( (res) => {
-      this.postag = res.result;
-    })
+    this.getPostagOutput.emit(this.textInput.split(/\n/));
   }
 
 }

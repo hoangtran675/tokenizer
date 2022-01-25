@@ -10,12 +10,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { TokenizerModuleModule } from './modules/tokenizer-module/tokenizer-module.module';
 import { LayoutComponent } from './modules/default-layout/layout/layout.component';
 import { OtherLayoutComponent } from './modules/default-layout/other-layout/other-layout.component';
+import { DefaultLayoutComponent } from './layout/default-layout/default-layout.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
-    OtherLayoutComponent
+    OtherLayoutComponent,
+    DefaultLayoutComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +40,8 @@ import { OtherLayoutComponent } from './modules/default-layout/other-layout/othe
       newestOnTop: true,
       maxOpened: 1
     } as Partial<GlobalConfig>
-    )
+    ),
+    NzLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

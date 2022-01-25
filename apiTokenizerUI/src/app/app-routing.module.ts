@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LayoutComponent } from './modules/default-layout/layout/layout.component';
+import { DefaultLayoutComponent } from './layout/default-layout/default-layout.component';
+// import { LayoutComponent } from './modules/default-layout/layout/layout.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: LayoutComponent,
+    component: DefaultLayoutComponent,
     children: [
       {
         path: 'tokenizer',
