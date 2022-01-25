@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeSimiliratyComponent implements OnInit {
 
   constructor() { }
-  title = 'Test';
+  title = 'Sentence Similarity';
   ngOnInit(): void {
   }
 

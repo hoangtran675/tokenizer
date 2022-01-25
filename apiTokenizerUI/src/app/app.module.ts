@@ -25,13 +25,15 @@ import { OtherLayoutComponent } from './modules/default-layout/other-layout/othe
     HttpClientModule,
     BrowserAnimationsModule,
     TokenizerModuleModule,
-    ToastrModule.forRoot({
+    ToastrModule.forRoot(
+      {
       timeOut: 5000,
       positionClass: 'toast-bottom-right',
       preventDuplicates: false,
       newestOnTop: true,
       maxOpened: 1
-    } as Partial<GlobalConfig>)
+    } as Partial<GlobalConfig>
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,7 +14,7 @@ export class TrainSearchComponent implements OnInit {
 
   constructor(private service: tokenizerService,
     private config: NgSelectConfig,
-    private toast: ToastrService) { 
+    private toast: ToastrService) {
       this.config.notFoundText = 'Custom not found';
       this.config.appendTo = 'body';
       this.config.bindValue = 'value';
@@ -24,9 +24,9 @@ export class TrainSearchComponent implements OnInit {
      question = '';
      selectModel = 'phobert';
      models: Model[] = [];
-   
+
      uuid = '';
-   
+
      // option=['option1', 'option2 ', 'option3'];
      // selectedOption = 'option1';
      formModel: any = {};
@@ -38,10 +38,10 @@ export class TrainSearchComponent implements OnInit {
        "model": this.selectModel,
        "doc": this.question
      };
-   
-   
+
+
      model = ['phobert', 'vispacy', 'fasttext'];
-   
+
      myTextarea = '';
   ngOnInit(): void {
   }
@@ -104,4 +104,7 @@ export class TrainSearchComponent implements OnInit {
 
   }
 
+  onTest() {
+    this.toast.success("Hello, I'm the toastr message.")
+  }
 }

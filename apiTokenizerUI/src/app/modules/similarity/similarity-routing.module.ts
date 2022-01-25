@@ -7,17 +7,20 @@ import { TrainSearchComponent } from './train-search/train-search.component';
 const routes: Routes = [
   {
     path : '',
-    component : HomeSimiliratyComponent
-  },
-  {
-    path : 'test',
-    component : TrainSearchComponent
-  },
-  {
-    path : 'test2',
-    component : SentenceSimilarityComponent
-  },{
-    path: '**', 
+    component : HomeSimiliratyComponent,
+    children:[
+      {
+        path : 'test',
+        component : TrainSearchComponent
+      },
+      {
+        path : 'sentence-similarity',
+        component : SentenceSimilarityComponent
+      }
+    ],
+  }
+  ,{
+    path: '**',
     component: HomeSimiliratyComponent
   }
 ];

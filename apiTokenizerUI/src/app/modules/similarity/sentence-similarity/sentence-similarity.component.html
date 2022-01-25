@@ -1,4 +1,3 @@
-
 <div class="content text-center " role="main">
   <div class="row text-center m-5 " style="height:700px">
 
@@ -6,8 +5,8 @@
 
       <!--List kiểm thử-->
       <h4 class=" m-2  p-0"><span class="col-9 ">Bộ kiểm thử</span> <span class="col-3 text-right">
-        <button  class=" border border-secondary btn btn-default btn-rounded" data-toggle="modal"
-           data-target="#modalLoginForm">+</button>
+        <button class=" border border-secondary btn btn-default btn-rounded" data-toggle="modal"
+                data-target="#modalLoginForm">+</button>
 
       </span></h4>
       <table class="table ">
@@ -43,7 +42,8 @@
             <input mdbInput type="text" class="form-control col-sm-6 border-secondary " id="question" placeholder="Test"
                    [ngModel]="question" (ngModelChange)="question = $event" [ngModelOptions]="{standalone: true}">
             <div class="col-sm-2 p-0 ml-2">
-              <ng-select class="ml-2 " style="height:100%"  [items]="model" (change)="onChange($event)" [searchable]="false"
+              <ng-select class="ml-2 " style="height:100%" [items]="model" (change)="onChange($event)"
+                         [searchable]="false"
                          [clearable]="false" placeholder="phobert"
                          [(ngModel)]="selectModel">
               </ng-select>
