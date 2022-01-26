@@ -64,16 +64,16 @@ export class SentenceSimilarityComponent implements OnInit {
       bot_name: bot_name,
       model: selectModel,
       doc: question
-    }).subscribe(
-      (resp) => {
+    }).subscribe({
+      next: (resp) => {
         this.models = resp.body;
         console.log('Body : ', this.models);
         console.log('length : ', resp.body.length);
         this.toast.success('success');
-      }, (error) => {
-        this.toast.error('error');
-      }
-    );
+      },
+      error: (e) =>   this.toast.error(e.message)
+    });
+
   }
 
   onclickItem(item: any) {
@@ -97,15 +97,14 @@ export class SentenceSimilarityComponent implements OnInit {
 
   createTestCase(input: any) {
 
-    this.sentenceServive.createTestCase(input).subscribe(
-      (resp) => {
+    this.sentenceServive.createTestCase(input).subscribe({
+      next: (resp) => {
         this.uuid = resp.body.uuid;
 
         this.toast.success('success ', this.uuid);
-      }, (error) => {
-        this.toast.error('error');
-      }
-    );
+      },
+      error: (e) =>   this.toast.error(e.message)
+    });
   }
 
   onCreate() {
