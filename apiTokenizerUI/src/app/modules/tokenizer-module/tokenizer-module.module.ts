@@ -8,7 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { TokenizerContainerComponent } from './tokenizer-container/tokenizer-container.component';
-
+// import { NzTableModule } from 'ng-zorro-antd/table';
+import { DemoNgZorroAntdModule } from 'src/app/ng-zorro-antd.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,9 @@ import { TokenizerContainerComponent } from './tokenizer-container/tokenizer-con
     CommonModule,
     NgbModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    // NzTableModule,
+    DemoNgZorroAntdModule
   ],
   providers: [],
 })

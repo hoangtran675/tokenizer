@@ -14,6 +14,8 @@ def tokenize():
     sentences = request.json['documents']
     list_result = []
     for item in sentences:
+        if item == '':
+            continue
         list_result.append({"vncore": VnCoreNLPTokenizer.tokenize(item),
                             "underthesea": UndertheseaTokenizer.tokenize(item),
                             "pyvi": PyviTokenizer.tokenize(item)})
@@ -27,6 +29,8 @@ def postag():
     sentences = request.json['documents']
     list_result = []
     for item in sentences:
+        if item == '':
+            continue
         list_result.append({"vncore": VnCoreNLPTokenizer.postag(item),
                             "underthesea": UndertheseaTokenizer.postag(item),
                             "pyvi": PyviTokenizer.postag(item)})

@@ -14,6 +14,8 @@ import { DefaultLayoutComponent } from './layout/default-layout/default-layout.c
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { DemoNgZorroAntdModule } from './ng-zorro-antd.module';
+// import { NzTableModule } from 'ng-zorro-antd/table';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,7 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    TokenizerModuleModule,
+    // TokenizerModuleModule,
     ToastrModule.forRoot(
       {
       timeOut: 5000,
@@ -41,7 +43,8 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
       maxOpened: 1
     } as Partial<GlobalConfig>
     ),
-    NzLayoutModule
+    DemoNgZorroAntdModule,
+    // NzTableModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
