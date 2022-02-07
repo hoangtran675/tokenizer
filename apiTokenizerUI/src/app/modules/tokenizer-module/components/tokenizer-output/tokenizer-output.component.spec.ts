@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TokenizerComponent } from './tokenizer.component';
+import { TokenizerOutputComponent } from './tokenizer-output.component';
 
-describe('TokenizerComponent', () => {
-  let component: TokenizerComponent;
-  let fixture: ComponentFixture<TokenizerComponent>;
+describe('TokenizerOutputComponent', () => {
+  let component: TokenizerOutputComponent;
+  let fixture: ComponentFixture<TokenizerOutputComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TokenizerComponent ]
+      declarations: [ TokenizerOutputComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TokenizerComponent);
+    fixture = TestBed.createComponent(TokenizerOutputComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

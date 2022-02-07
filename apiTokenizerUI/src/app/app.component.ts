@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TestService } from './service/test.service';
+
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,6 @@ import { TestService } from './service/test.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'apiTokenizerUI';
+  title = 'Tokenizer';
   constructor() {}
 }

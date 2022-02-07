@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OtherLayoutComponent } from './other-layout.component';
+import { PageTokenizerComponent } from './page-tokenizer.component';
 
-describe('OtherLayoutComponent', () => {
-  let component: OtherLayoutComponent;
-  let fixture: ComponentFixture<OtherLayoutComponent>;
+describe('PageTokenizerComponent', () => {
+  let component: PageTokenizerComponent;
+  let fixture: ComponentFixture<PageTokenizerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OtherLayoutComponent ]
+      declarations: [ PageTokenizerComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OtherLayoutComponent);
+    fixture = TestBed.createComponent(PageTokenizerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

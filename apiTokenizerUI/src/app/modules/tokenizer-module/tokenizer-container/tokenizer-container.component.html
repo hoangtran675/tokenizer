@@ -1,7 +1,22 @@
-<app-tokenizer
+<!-- <app-tokenizer
     [list_word]="list_word"
     [postag]="postag"
     (getWordOuput)="getWord($event)"
     (getPostagOutput)="getPostag($event)"
     >
-</app-tokenizer>
+</app-tokenizer> -->
+<div class="container">
+    <app-tokenizer-input (getWordOuput)="getWord($event)" (getPostagOutput)="getPostag($event)">
+    </app-tokenizer-input>
+    <app-tokenizer-output 
+        [list_word]="list_word" 
+        [postag]="postag" 
+        [loading_get_word]="loading_get_word"
+        [loading_postag]="loading_postag" >
+    </app-tokenizer-output>
+</div>
+<!--  -->
+<!--  -->
+<!-- Cần gói list_word và loading_list_word thành một, tương tự cho postag -->
+<!--  -->
+<!--  -->

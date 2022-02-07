@@ -1,0 +1,38 @@
+
+    <h1 class="center">Word</h1>
+    <nz-table #wordTable [nzData]="list_word"
+              [nzLoading]="loading_get_word">
+      <thead>
+        <tr>
+          <th [nzAlign]="'center'"><h5>Pyvi</h5></th>
+          <th [nzAlign]="'center'"><h5>Underthesea</h5></th>
+          <th [nzAlign]="'center'"><h5>VN Core</h5></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of wordTable.data">
+          <td >{{item.pyvi}}</td>
+          <td >{{item.underthesea}}</td>
+          <td >{{item.vncore}}</td>
+        </tr>
+      </tbody>
+    </nz-table>
+    <br>
+    <h1 class="center">Postag</h1>
+    <nz-table #postagTable [nzData]="postag"
+              [nzLoading]="loading_postag">
+      <thead>
+        <tr>
+          <th [nzAlign]="'center'"><h5>Pyvi</h5></th>
+          <th [nzAlign]="'center'"><h5>Underthesea</h5></th>
+          <th [nzAlign]="'center'"><h5>VN Core</h5></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of postagTable.data">
+          <td >{{item.pyvi}}</td>
+          <td >{{item.underthesea}}</td>
+          <td >{{item.vncore}}</td>
+        </tr>
+      </tbody>
+    </nz-table>

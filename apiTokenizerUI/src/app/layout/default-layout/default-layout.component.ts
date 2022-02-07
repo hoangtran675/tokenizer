@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./default-layout.component.scss']
 })
 export class DefaultLayoutComponent implements OnInit {
-
+  // có thể apply nhiều kiểu layout : layout có navibar ngang, layout có navibar dọc,...
   constructor() { }
 
   ngOnInit(): void {

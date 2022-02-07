@@ -1,0 +1,10 @@
+<div nz-row>
+    <textarea nz-input placeholder="Put the context" nzAutosize [(ngModel)] = "textInput"></textarea>
+</div> 
+<br>
+<div nz-row>
+    <nz-space [nzSize]="'small'">
+      <button nz-button nzType="primary" *nzSpaceItem class="ml-2" (click)="getWord()">Get word</button>
+      <button nz-button nzType="primary" *nzSpaceItem (click)="getPostag()">Get Postag</button>
+    </nz-space>
+</div>
