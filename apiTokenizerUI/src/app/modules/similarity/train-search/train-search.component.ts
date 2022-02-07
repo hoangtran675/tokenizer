@@ -51,18 +51,17 @@ export class TrainSearchComponent implements OnInit {
     console.log('myTextarea : ', this.myTextarea);
     console.log('++++++++++++++++++++++++++++++++++++++++++++++');
     console.log('arrText : ', this.arrText);
-    this.service.train({bot_name: "Chế độ chính sách",paraphrases: arr}).subscribe(
-
-      (resp) => {
+    this.service.train({bot_name: "Chế độ chính sách",paraphrases: arr}).subscribe({
+      next: (resp) => {
 
         console.log('Body : ', resp.body);
         this.uuid = resp.body.uuid;
         this.toast.success('success');
 
-      },(error )=>{
+      }, error: (error) => {
         this.toast.error('error');
       }
-    );
+    });
 
   }
 
@@ -77,15 +76,16 @@ export class TrainSearchComponent implements OnInit {
       bot_name: "thong_tin_cong_ty",
       model: this.selectModel,
       doc: this.question
-    }).subscribe(
-      (resp) => {
-        this.models = resp.body;
-        console.log('Body : ', this.models);
-        console.log('length : ', resp.body.length);
-        this.toast.success('success');
-      },(error )=>{
-        this.toast.error('error');
-      }
+    }).subscribe({
+    next:(resp) => {
+      this.models = resp.body;
+      console.log('Body : ', this.models);
+      console.log('length : ', resp.body.length);
+      this.toast.success('success');
+    },error:(error )=>{
+      this.toast.error('error');
+    }
+    }
     );
   }
 
@@ -108,3 +108,4 @@ export class TrainSearchComponent implements OnInit {
     this.toast.success("Hello, I'm the toastr message.")
   }
 }
+

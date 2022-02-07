@@ -1,5 +1,5 @@
 import {HttpClient, HttpHeaders, HttpResponse} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import {catchError, Observable} from 'rxjs';
 import {Injectable} from "@angular/core";
 
 const httpOptions = {
